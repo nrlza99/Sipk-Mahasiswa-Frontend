@@ -34,10 +34,10 @@ function Registrasi() {
         password: formData.password,
       };
 
-      const response = await axios.post(
-        "http://localhost:5000/register",
-        dataKirim
-      );
+      const response = await axiosInstance.post(
+  "/register",
+  dataKirim
+);
 
       alert(response.data.message || "Registrasi berhasil! Silakan login.");
       navigate("/login");
